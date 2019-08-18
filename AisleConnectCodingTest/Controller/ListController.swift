@@ -67,11 +67,13 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productName = products[indexPath.row].name
         
         let id = products[indexPath.row].id
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailtVC = storyboard.instantiateViewController(withIdentifier: "Detail Controller") as! DetailController
         detailtVC.id = id
+        detailtVC.title = productName
         navigationController?.pushViewController(detailtVC, animated: true)
         
         

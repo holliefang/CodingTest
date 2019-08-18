@@ -20,7 +20,7 @@ class DetailController: UIViewController, URLSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         network.delegate = self
-        navigationItem.title = "Product Detail"
+//        navigationItem.title = "Product Detail"
         
         guard let id = id else {return}
     
